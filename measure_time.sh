@@ -28,4 +28,4 @@ end_time2=$(date +%s%N)
 elapsed_time2=$((($end_time2 - $start_time2)/1000000)) # Convert nanoseconds to milliseconds
 
 # Print the elapsed time
-echo "Elapsed time for data load from single file: ${elapsed_time2}ms"
+echo "Elapsed time for data load from multiple files: ${elapsed_time2}ms"
