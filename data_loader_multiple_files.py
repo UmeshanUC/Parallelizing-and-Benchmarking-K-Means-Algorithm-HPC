@@ -62,6 +62,7 @@ if __name__ == "__main__":
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
 
+
     # Here, gathered_data is a list of NumPy arrays with the same number of rows
     for idx, data in enumerate(gathered_data):
         print(f"Process {rank}, File {idx}, Data shape: {data.shape}")
