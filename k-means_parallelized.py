@@ -89,10 +89,6 @@ def parallel_kmeans(data, k, max_iterations, tolerance):
         # Update centroids by averaging data points
         new_centroids = kmeans_fit(data)
 
-        # Check for convergence
-        if has_converged(new_centroids, centroids, tolerance):
-            break
-
         # Gather new centroids from all processes to update globally
         new_centroids = comm.gather(new_centroids, root=0)
 
